@@ -27,8 +27,22 @@ python-network-toolkit/
 │   ├── http_server.py         # Minimal HTTP server
 │   ├── http_client_test.py    # Test client for the server
 │   └── port_check.py          # Check a list of ports on a host
+├── http/
+│   ├── simple_http_server.py  # Minimal HTTP server
+│   ├── custom_http_server.py  # HTTP server with a custom request handler
+│   ├── https_server.py        # HTTPS server with TLS
+│   ├── http_client.py         # HTTP client
+│   ├── data_download.py       # Download a file over HTTP
+│   ├── resume_download.py     # Resume an interrupted download
+│   └── http_compression.py    # Gzip-compressed HTTP
+├── ftp/
+│   ├── ftp_upload.py          # Upload a file to an FTP server
+│   └── ftp_file_listing.py    # List files on an FTP server
+├── email/
+│   └── pop3_email_download.py # Download email over POP3
 ├── packet_sniffer/
-│   └── sniffer.py             # scapy packet capture with logging (needs root)
+│   ├── sniffer.py             # scapy packet capture with logging (needs root)
+│   └── raw_socket_sniffer.py  # Packet sniffer using raw sockets (needs root)
 ├── system_utils/
 │   ├── host_info.py           # Hostname, IP, memory usage
 │   ├── threading_demo.py      # Running work on multiple threads
@@ -76,8 +90,9 @@ The subnet calculation is verified against Python's `ipaddress` module for
 
 - IPv4 subnetting and binary math (network/broadcast/wildcard/CIDR)
 - Socket programming: TCP clients, a basic HTTP server, port checks
-- Packet capture and analysis with scapy
-- Python standard library: `socket`, `threading`, `subprocess`, `argparse`
+- Packet capture and analysis with scapy and raw sockets
+- Application protocols: HTTP/HTTPS servers and clients, FTP, POP3 email
+- Python standard library: `socket`, `threading`, `subprocess`, `argparse`, `http`, `ftplib`, `poplib`
 
 ## Disclaimer
 
